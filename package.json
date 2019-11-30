@@ -1,0 +1,14 @@
+{
+  "name": "TS-learn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:intVergil/TS-learn.git",
+  "author": "intvergil <yan53074@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "dependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
