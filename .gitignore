@@ -5,3 +5,4 @@ yarn.lock
 app.js
 analytics.js
 favicon.ico
+dist
