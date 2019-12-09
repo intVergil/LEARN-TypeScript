@@ -1,13 +1,3 @@
-let userInput: unknown;
-let userName: string;
+const userName = 'vergil';
 
-userInput = 5;
-userInput = "aaa";
-if (typeof userInput === "string") {
-  userName = userInput;
-}
-
-function generateError(message: string, code: number): never {
-  throw { message: message, errorCode: code };
-}
-generateError("An error", 500);
+console.log(userName)

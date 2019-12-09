@@ -4,7 +4,7 @@ This repository accompanies Academind's Udemy video series :
 
 - [Understanding TypeScript - 2020 Edition](https://www.udemy.com/course/understanding-typescript/)
 
-## 02 TypeScript Basic
+<!-- ## 02 TypeScript Basic
 
 - basic
   - number : 0, 10, 20
@@ -28,4 +28,8 @@ This repository accompanies Academind's Udemy video series :
 - Unknown Type
   - have to check type in order to change value
 - Never Type
-  - return nothing
+  - return nothing -->
+
+## 03 The TypeScript Compiler
+
+watch mode: `tsc app.ts --watch` `tsc app.ts -w`
