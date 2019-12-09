@@ -22,3 +22,7 @@ This repository accompanies Academind's Udemy video series :
 - Aliases Types
   - `type yourCustomTypeName = number | string`
   - `type yourCustomTypeName = 'as-number' | 'as-text'`
+- Functions Types
+  - `let myFunction: (a: number, b: number) => number;`
+  - `function app(params:type):void {...}`
+  
