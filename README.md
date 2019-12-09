@@ -25,4 +25,7 @@ This repository accompanies Academind's Udemy video series :
 - Functions Types
   - `let myFunction: (a: number, b: number) => number;`
   - `function app(params:type):void {...}`
-  
+- Unknown Type
+  - have to check type in order to change value
+- Never Type
+  - return nothing
