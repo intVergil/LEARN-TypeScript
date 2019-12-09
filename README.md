@@ -32,4 +32,19 @@ This repository accompanies Academind's Udemy video series :
 
 ## 03 The TypeScript Compiler
 
-watch mode: `tsc app.ts --watch` `tsc app.ts -w`
+watch mode:
+
+```shell
+tsc app.ts --watch
+# or
+tsc app.ts -w
+```
+
+project folder complier:
+
+```shell
+tsc --init
+tsc
+# or
+tsc -w
+```
