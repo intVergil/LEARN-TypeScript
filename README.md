@@ -30,7 +30,7 @@ This repository accompanies Academind's Udemy video series :
 - Never Type
   - return nothing -->
 
-## 03 The TypeScript Compiler
+<!-- ## 03 The TypeScript Compiler
 
 watch mode:
 
@@ -47,4 +47,6 @@ tsc --init
 tsc
 # or
 tsc -w
-```
+``` -->
+
+## 04 Next-generation JavaScript & TypeScript
