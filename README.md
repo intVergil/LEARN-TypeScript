@@ -49,7 +49,7 @@ tsc
 tsc -w
 ``` -->
 
-## 04 Next-generation JavaScript & TypeScript
+<!-- ## 04 Next-generation JavaScript & TypeScript
 
 [Next-gen JS Feature Table](https://kangax.github.io/compat-table/es6/)
 
@@ -61,4 +61,7 @@ some new api with ES6
 - Default Parameters
 - The Spread Operator (...)
 - Rest Parameters
-- Array & Object Destructuring
+- Array & Object Destructuring -->
+
+## 05 classes and interfaces
+
