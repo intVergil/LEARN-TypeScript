@@ -50,3 +50,15 @@ tsc -w
 ``` -->
 
 ## 04 Next-generation JavaScript & TypeScript
+
+[Next-gen JS Feature Table](https://kangax.github.io/compat-table/es6/)
+
+some new api with ES6
+
+- Let and Const
+- Arrow Function
+  - `const myFuc: (a: number | string) => void = props => {}`
+- Default Parameters
+- The Spread Operator (...)
+- Rest Parameters
+- Array & Object Destructuring
