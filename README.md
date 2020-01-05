@@ -63,7 +63,7 @@ some new api with ES6
 - Rest Parameters
 - Array & Object Destructuring -->
 
-## 05 classes and interfaces
+<!-- ## 05 classes and interfaces
 
 ### class
 
@@ -188,4 +188,44 @@ let c = getCounter();
 c(10);
 c.reset();
 c.interval = 5.0;
+``` -->
+
+## 06 Advanced Types
+
+- Intersection Types:
+
+```typescript
+interface Admin {}
+interface Employee {}
+interface ElevatedEmployee extends Employee, Admin {}
 ```
+
+- More on Type Guards
+
+```typescript
+// string or number
+type Combinable = string | number;
+// number or boolean
+type Numeric = number | boolean;
+// number only
+type Universal = Combinable & Numeric;
+```
+
+- Discriminated Unions
+  - `'propertyName' in yourType`
+  - `instanceof`: Used to discriminate the method or interface type
+  - `{type:''}` `switch(type)`
+
+- Type Casting:
+
+```typescript
+<HTMLInputElement>item
+item as HTMLInputElement
+```
+
+- Index Properties
+  - `[prop: string]: string;`
+
+- Function Overloads
+- Optional Chaining
+- Nullish Coalescing
