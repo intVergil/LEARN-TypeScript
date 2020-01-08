@@ -190,7 +190,7 @@ c.reset();
 c.interval = 5.0;
 ``` -->
 
-## 06 Advanced Types
+<!-- ## 06 Advanced Types
 
 - Intersection Types:
 
@@ -228,4 +228,6 @@ item as HTMLInputElement
 
 - Function Overloads
 - Optional Chaining
-- Nullish Coalescing
+- Nullish Coalescing -->
+
+## 007
