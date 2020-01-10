@@ -1,235 +1,44 @@
-# TS-learn
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This repository accompanies Academind's Udemy video series :
+## Available Scripts
 
-- [Understanding TypeScript - 2020 Edition](https://www.udemy.com/course/understanding-typescript/)
+In the project directory, you can run:
 
-<!-- ## 02 TypeScript Basic
+### `yarn start`
 
-- basic
-  - number : 0, 10, 20
-  - string : 'hello', 'good'
-  - boolean : true, false
-- objs-arrays-enums
-  - object: {age:30}
-  - array: [1,2,3]
-  - tuple: [1,2]  `fixed-length array`
-  - enum: enum{ NEW, OLD }  `automatically enumerated global constant identifiers`
-- Union Types
-  - `number | string`
-- Literal Types
-  - `'as-number' | 'as-text'`
-- Aliases Types
-  - `type yourCustomTypeName = number | string`
-  - `type yourCustomTypeName = 'as-number' | 'as-text'`
-- Functions Types
-  - `let myFunction: (a: number, b: number) => number;`
-  - `function app(params:type):void {...}`
-- Unknown Type
-  - have to check type in order to change value
-- Never Type
-  - return nothing -->
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-<!-- ## 03 The TypeScript Compiler
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-watch mode:
+### `yarn test`
 
-```shell
-tsc app.ts --watch
-# or
-tsc app.ts -w
-```
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-project folder complier:
+### `yarn build`
 
-```shell
-tsc --init
-tsc
-# or
-tsc -w
-``` -->
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-<!-- ## 04 Next-generation JavaScript & TypeScript
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-[Next-gen JS Feature Table](https://kangax.github.io/compat-table/es6/)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-some new api with ES6
+### `yarn eject`
 
-- Let and Const
-- Arrow Function
-  - `const myFuc: (a: number | string) => void = props => {}`
-- Default Parameters
-- The Spread Operator (...)
-- Rest Parameters
-- Array & Object Destructuring -->
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-<!-- ## 05 classes and interfaces
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### class
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-#### Basic class
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-> - Constructor : 定义构造函数,通过`new`生成新实例的时候，会自动调>用构造函数
-> - super: 调用父类的构造函数和方法
-> - readonly: 只读属性关键字，只允许出现在属性声明或索引签名中
-> - get : 可以改变属性的读取行为
-> - set : 可以改变属性的赋值行为
+## Learn More
 
-#### Properties
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-> - static : 不需要实例化，而是直接通过类来调用
-> - private : 私有，只能被其定义所在的类访问
-> - public : 公有，可以在任何地方被访问
-> - protected : 受保护，可以被其自身以及其子类和父类访问
-
-#### Abstract
-
->  1. 抽象类是不允许被实例化的
->  2. 抽象类中的抽象方法必须被子类实现
-
-#### Singletons
-
-> - 单例模式，实例化在内部进行，无法使用`new`创建新的实例
-
----
-
-### interface
-
-#### Basic interface
-
-> - 接口（Interfaces）是一个很重要的概念，它是对行为的抽象
-> - 可选属性: `{ age?: number }`
-> - 任意属性: `{ [propName: string]: any }`
-> - 只读属性: `{ Readonly name: string }`
-
-#### Using Interfaces with Classes
-
-- 类实现接口:
-
-```typescript
-interface Alarm {
-    alert();
-}
-
-interface Light {
-    lightOn();
-    lightOff();
-}
-
-class Car implements Alarm, Light {
-    alert() {
-        console.log('Car alert');
-    }
-    lightOn() {
-        console.log('Car light on');
-    }
-    lightOff() {
-        console.log('Car light off');
-    }
-}
-```
-
-- 接口继承接口:
-
-```typescript
-interface Alarm {
-    alert();
-}
-
-interface LightAlarm extends Alarm {
-    lightOn();
-    lightOff();
-}
-```
-
-- 接口继承类:
-
-```typescript
-class Point {
-    x: number;
-    y: number;
-}
-
-interface Point3d extends Point {
-    z: number;
-}
-
-let point3d: Point3d = {x: 1, y: 2, z: 3};
-```
-
-- 混合类型:
-
-```typescript
-//可以使用接口的方式来定义一个函数需要符合的形状
-interface SearchFunc {
-    (source: string, subString: string): boolean;
-}
-
-let mySearch: SearchFunc;
-mySearch = function(source: string, subString: string) {
-    return source.search(subString) !== -1;
-}
-
-//一个函数还可以有自己的属性和方法
-interface Counter {
-    (start: number): string;
-    interval: number;
-    reset(): void;
-}
-
-function getCounter(): Counter {
-    let counter = <Counter>function (start: number) { };
-    counter.interval = 123;
-    counter.reset = function () { };
-    return counter;
-}
-
-let c = getCounter();
-c(10);
-c.reset();
-c.interval = 5.0;
-``` -->
-
-<!-- ## 06 Advanced Types
-
-- Intersection Types:
-
-```typescript
-interface Admin {}
-interface Employee {}
-interface ElevatedEmployee extends Employee, Admin {}
-```
-
-- More on Type Guards
-
-```typescript
-// string or number
-type Combinable = string | number;
-// number or boolean
-type Numeric = number | boolean;
-// number only
-type Universal = Combinable & Numeric;
-```
-
-- Discriminated Unions
-  - `'propertyName' in yourType`
-  - `instanceof`: Used to discriminate the method or interface type
-  - `{type:''}` `switch(type)`
-
-- Type Casting:
-
-```typescript
-<HTMLInputElement>item
-item as HTMLInputElement
-```
-
-- Index Properties
-  - `[prop: string]: string;`
-
-- Function Overloads
-- Optional Chaining
-- Nullish Coalescing -->
-
-<!-- ## 007 Generics-->
-
-## 008 Decorators
+To learn React, check out the [React documentation](https://reactjs.org/).
