@@ -230,4 +230,6 @@ item as HTMLInputElement
 - Optional Chaining
 - Nullish Coalescing -->
 
-## 007
+<!-- ## 007 Generics-->
+
+## 008 Decorators
