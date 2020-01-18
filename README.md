@@ -232,4 +232,6 @@ item as HTMLInputElement
 
 <!-- ## 007 Generics-->
 
-## 008 Decorators
+<!-- ## 008 Decorators -->
+
+## 009 Practice Time! Let's build a Drag & Drop Project
