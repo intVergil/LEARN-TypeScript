@@ -273,3 +273,13 @@ item as HTMLInputElement
       ```
 
   3. 缺点 `reference` 提示不明显, 容易漏掉且极难检查
+
+- Using ES Modules
+
+  ```typescript
+  // a.ts
+  export interface MyInterface {}
+
+  // b.ts
+  import { MyInterface } from './a.js'; // 注意是js文件
+  ```
