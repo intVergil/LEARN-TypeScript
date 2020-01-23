@@ -234,4 +234,40 @@ item as HTMLInputElement
 
 <!-- ## 008 Decorators -->
 
-## 009 Practice Time! Let's build a Drag & Drop Project
+<!-- ## 009 Practice Time! Let's build a Drag & Drop Project -->
+
+## 010 Modules & Namespaces
+
+- Working with Namespaces
+
+  1. `namespace` 引用
+
+     ```Typescript
+     // a.ts
+     namespace MyNamespace {
+       export interface MyInterface {
+         ...
+       }
+       ...
+     }
+
+     // b.ts
+     /// <reference path="a.ts" />
+     namespace MyNamespace {
+       ...
+     }
+     ```
+
+  2. `tsconfig` 设置
+
+      ```JSON
+      {
+        "compilerOptions":
+        {
+          "module": "amd",
+          ...
+          "outFile": "./dist/bundle.js",
+          ...
+        }
+      }
+      ```
