@@ -284,6 +284,20 @@ item as HTMLInputElement
   import { MyInterface } from './a.js'; // 注意是js文件
   ``` -->
 
-## 011 Using Webpack with Typescript
+<!-- ## 011 Using Webpack with Typescript
 
-- Todo: 参考webpack-learn
+- Todo: 参考webpack-learn -->
+
+## 012 3rd Party Libraries & TypeScript
+
+- `lodash`
+
+  ```shell
+  yarn add lodash @types/lodash
+  ```
+
+- `class-transformer` : 将获取的JSON格式数据，转换为指定的Class类型
+
+- `class-validator` : 强大的类型检查库
+
+- declare: 表示声明作用
